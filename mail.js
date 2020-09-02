@@ -1,5 +1,7 @@
 const mailer = require("nodemailer");
-import {USER, PASS} from './config'
+const {USER} = require('./config');
+const {PASS} = require('./config');
+const {Hello} = require('./hello_template');
 
 const getEmailData = (to, name, template) => {
     let data = null;
@@ -7,10 +9,10 @@ const getEmailData = (to, name, template) => {
     switch (template) {
         case "hello":
         data = {
-            from: "",
-            to,
+            from: "jodie-1992@outlook.com",
+            to: "jodie-1992@outlook.com",
             subject: `hello ${name}`,
-            html: hello()
+            html: Hello()
         }
         break;
         default: 
@@ -21,10 +23,10 @@ const getEmailData = (to, name, template) => {
 
 const sendEmail = (to, name, type) => {
     const smtpTransport = mailer.createTransport({
-        service: "Gmail",
+        service: "outlook",
         auth: {
-            user: `${USER}`,
-            pass: `${PASS}`
+            user: `jodie-1992@outlook.com`,
+            pass: `s12790992`
         }
     })
 
