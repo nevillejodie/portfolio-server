@@ -11,7 +11,7 @@ const getEmailData = (to, name, template) => {
         data = {
             from: "jodie-1992@outlook.com",
             to: "jodie-1992@outlook.com",
-            subject: `hello ${name}`,
+            subject: `From ${name}`,
             html: Hello()
         }
         break;
@@ -25,8 +25,8 @@ const sendEmail = (to, name, type) => {
     const smtpTransport = mailer.createTransport({
         service: "outlook",
         auth: {
-            user: `jodie-1992@outlook.com`,
-            pass: `s12790992`
+            user: `${USER}`,
+            pass: `${PASS}`
         }
     })
 
