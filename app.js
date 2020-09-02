@@ -21,7 +21,7 @@ app.get("/health", (req, res) => {
 
   app.post("/api/sendMail", function(req, res) {
     res.header('Access-Control-Allow-Origin', '*');
-    console.log(req.body)
+    let data = req.body;
     sendEmail(req.body.email, req.body.name, "hello")
 
   })

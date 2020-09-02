@@ -10,6 +10,7 @@ const Hello = data => {
     <body style="margin: 0; padding: 0;">
     <br />
     <div>Hello</div>
+    <p>${data.name}</p>
     </body>
     </html>`;
 };

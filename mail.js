@@ -12,7 +12,7 @@ const getEmailData = (to, name, template) => {
             from: "jodie-1992@outlook.com",
             to: "jodie-1992@outlook.com",
             subject: `From ${name}`,
-            html: Hello()
+            html: `${name}`
         }
         break;
         default: 
